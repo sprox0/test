@@ -19,10 +19,58 @@
                         <h2 class="header-title">New user?</h2>
                         <p class="header-subtitle">Use the form below to create your account.</p>
                     </header>
-                    
+                    <div class="user-info-section">
+                       <div class="user-data-name">
+                            <p class="user-name-title">First Name</p>
+                            <input type="text" class="user-name">
+                       </div>
+                       <div class="user-data-name">
+                            <p class="user-name-title">Last Name</p>
+                            <input type="text" class="user-last-name">
+                       </div>
+                       <div class="user-data-name">
+                            <p class="user-nationality">Nationality</p>
+                            <select name="user-nationality">
+                                <option value=""></option>
+                                <option value="American">American</option>
+                                <option value="Belarusian">Belarusian</option>
+                                <option value="Russian">Russian</option>
+                                <option value="England">England</option>
+                            </select>
+                       </div>
+                       <div class="user-data-name">
+                        <p class="user-email-name">E-mail</p>
+                        <input type="email" class="user-email">
+                       </div>
+                       <div class="user-data-name">
+                            <p class="user-name-title">Date</p>
+                            <div class="birthday-date">
+                                <select id="dobday"></select>
+                                <select id="dobmonth"></select>
+                                <select id="dobyear"></select>
+                            </div>
+                       </div>
+                       <div class="user-data-name">
+                            <p class="user-name-title">Gender</p>
+                            <input type="radio" class="user-gender" id="male" value="Male">
+                            <label for="male">Male</label>
+                            <input type="radio" class="user-gender" id="female" value="Female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="user-data-name">
+                            <p class="user-name-title">Password</p>
+                            <input type="password" class="user-password">           
+                        </div>
+                        <div class="user-data-name">
+                            <p class="user-name-title">Confirm Password</p>           
+                            <input type="password" class="user-confirm-password">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="/path/to/cdn/jquery.min.js"></script>
+    <script src="/path/to/dobpicker.js"></script>
 </body>
 </html>
