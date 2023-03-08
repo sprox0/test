@@ -1,10 +1,246 @@
 @font-face {
-    font-family: 'WorkSans';
-    src: url('/assets/fonts/Work_Sans/static/WorkSans-Black.ttf');
+  font-family: "WorkSans";
+  src: url("/assets/fonts/Work_Sans/static/WorkSans-Medium.ttf");
 }
-
+@font-face {
+  font-family: "WorkSans-reg";
+  src: url("/assets/fonts/Work_Sans/static/WorkSans-Regular.ttf");
+}
+@font-face {
+  font-family: "WorkSans-ligth";
+  src: url("/assets/fonts/Work_Sans/static/WorkSans-Light.ttf");
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("/assets/fonts/PT_Sans/PTSans-Regular.ttf");
+}
 body {
-    max-width: 100%;
-    max-height: 100%;
+  margin: 0 auto;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
+.wrapper {
+  background-color: #F4F5FC;
+  width: 100vw;
+  height: 100vh;
+}
+
+.data-user-section {
+  max-width: 92.5%;
+  margin: 0 auto;
+}
+
+.registr-card {
+  max-width: 41.5625rem;
+  height: 30.0625rem;
+  margin: auto;
+  display: flex;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.signup-section {
+  width: 20.7%;
+  background-color: #5A61ED;
+  display: flex;
+  align-items: end;
+}
+
+.signup-text {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.0625rem;
+  line-height: 3.9375rem;
+  letter-spacing: 0.03125rem;
+  padding-top: 1.375rem;
+  padding-right: 1.125rem;
+  color: #FFFFFF;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.data-user {
+  background-image: url(/assets/SVG/userback.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-color: #FFFFFF;
+  width: 33rem;
+}
+
+.header-user {
+  height: 10%;
+  width: 100%;
+}
+
+.header-title {
+  font-family: "WorkSans";
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.03125rem;
+  padding-top: 2.4375rem;
+  margin: 0;
+}
+
+.header-subtitle {
+  color: #111111;
+  font-family: "WorkSans-ligth";
+  font-size: 0.875rem;
+  line-height: 1rem;
+  margin: 0;
+  width: 100%;
+}
+
+.day-bth {
+  cursor: pointer;
+  width: 3.5rem;
+  border: none;
+  border-bottom: 0.0625rem solid #f2f2f2;
+}
+
+.day-bth:focus {
+  height: 4.375rem;
+}
+
+.month-bth {
+  cursor: pointer;
+  width: 5.6875rem;
+  border: none;
+  border-bottom: 0.0625rem solid #F2F2F2;
+}
+
+.year-bth {
+  cursor: pointer;
+  width: 4.25rem;
+  border: none;
+  border-bottom: 0.0625rem solid #F2F2F2;
+}
+
+.user-info-section {
+  width: 30.3125rem;
+  display: grid;
+  grid-template-columns: repeat(2, 14.8125rem);
+  justify-content: space-between;
+  padding-top: 1.25rem;
+}
+
+.user-name-first, .user-name-second {
+  color: #7C7C7C;
+  font-family: "WorkSans";
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  margin: 0;
+}
+
+.data-user-firstline {
+  padding: 0;
+  height: 2.625rem;
+}
+
+.user-data-name {
+  height: 2.625rem;
+  padding-top: 1rem;
+  padding-right: 0.8125rem;
+}
+
+.user-name-title {
+  color: #7C7C7C;
+  font-family: "WorkSans";
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding-bottom: 0.2125rem;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+.user-gender-title {
+  cursor: pointer;
+  color: #111111;
+  font-family: "WorkSans-reg";
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  text-align: center;
+  padding-right: 1rem;
+}
+
+.gender-title {
+  padding-bottom: 0.3125rem;
+}
+
+.user-gender {
+  cursor: pointer;
+  margin: 0;
+}
+
+.user-email {
+  cursor: pointer;
+  border: none;
+  border-bottom: 0.0625rem solid #F2F2F2;
+  width: 14.625rem;
+  background: url(/assets/SVG/Shape.svg);
+  background-repeat: no-repeat;
+  background-position: 95%;
+}
+
+.user-name, .user-last-name,
+.user-nation,
+.user-password, .user-confirm-password {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 0.0625rem solid #F2F2F2;
+  width: 14.625rem;
+}
+
+.account-login {
+  color: #000000;
+  font-family: "WorkSans-ligth";
+  font-weight: 200;
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  margin: 0;
+}
+
+.login-link {
+  font-family: "WorkSans-ligth";
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+}
+
+.footer-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 6.125rem;
+}
+
+.footer-btn {
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  border: none;
+  background-color: #5A61ED;
+  width: 9.625rem;
+  height: 2rem;
+}
+
+.footer-btn:hover {
+  background-color: #4e56ee;
+}
+
+.footer-btn:active {
+  background-color: #141ee1;
+}/*# sourceMappingURL=style.css.map */
