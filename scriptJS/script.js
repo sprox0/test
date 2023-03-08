@@ -11,6 +11,42 @@ let monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'Julay',
 let yearArr = ['2005', '2004', '2003', '2002', '2001', '2000', '1999', '1998', '1997', '1996', '1995', '1994', '1993', '1992', '1991', '1990',]
 
 
+function confirmPass(){
+    if (password.value === confirmPassword.value){
+        password.style.borderColor = '#4ee12a'
+        confirmPassword.style.borderColor = '#4ee12a'
+    } 
+    else {
+        password.style.borderColor = '#e10e0e'
+        confirmPassword.style.borderColor = '#e10e0e'
+    }
+    password.style.borderColor = '#F2F2F2'
+        confirmPassword.style.borderColor = '#F2F2F2'
+}
+
+
+
+function setpassword(e) {
+    
+    if (e.type === 'keypress') {
+        if (e.which == 13 || e.keyCode == 13) {
+            password.blur();
+            confirmPassword.blur();
+        }
+    } 
+
+    if (password.value === confirmPassword.value){
+        password.style.borderColor = '#4ee12a'
+        confirmPassword.style.borderColor = '#4ee12a'
+    } 
+    else {
+        password.style.borderColor = '#e10e0e'
+        confirmPassword.style.borderColor = '#e10e0e'
+    }  
+    
+    
+}
+
 
 function yearNum() {
     for (let i = 0; i < yearArr.length; i++){
@@ -34,6 +70,8 @@ function monthNum() {
 }
 monthNum()
 
+
+
 function dayNum() {
     
     for (let i = 0; i < dayArr.length; i++){
@@ -42,7 +80,7 @@ function dayNum() {
         option.text = dayArr[i]
         day.appendChild(option)
     }
-  
+    
 }
 dayNum()
 
@@ -83,5 +121,8 @@ function setEmail(e) {
     }
 }
 
+window.addEventListener('click', confirmPass) 
+confirmPassword.addEventListener('click', confirmPass)
+window.addEventListener('keypress', setpassword)
 window.addEventListener('click', eMail) 
 email.addEventListener('keypress', setEmail)

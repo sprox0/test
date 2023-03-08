@@ -38,6 +38,19 @@ body {
 .data-user-section {
     max-width: 92.5%;
     margin: 0 auto;
+    transition: ease-in-out 6s;
+    animation-name: showcard;
+    animation-duration: 3s;
+    overflow: hidden;
+}
+
+@keyframes showcard {
+    0% {
+        margin-top: toRem(200);
+    }
+    100% {
+        margin-top: 0;
+    }
 }
 
 .registr-card {
@@ -47,6 +60,28 @@ body {
     display: flex;
     padding-top: 2%;
     padding-bottom: 2%;
+    transition: ease-in-out 1s;
+    animation-name: show;
+    animation-duration: 2s;
+    overflow: hidden;
+}
+
+@keyframes show{
+    0% {
+        height: 0;
+        filter: blur(toRem(3));
+    }
+
+    50%{
+        filter: blur(toRem(1));
+    }
+    75%{
+        filter: blur(toRem(0.3));
+    }
+
+    100% {
+        height: toRem(481);
+    }
 }
 
 .signup-section {
@@ -91,6 +126,7 @@ body {
     letter-spacing: toRem(-0.5);
     padding-top: toRem(39);
     margin: 0;
+    transition: ease-in-out 1s;
 }
 
 .header-subtitle {
@@ -109,17 +145,14 @@ body {
     width: toRem(56);
     border: none;
     border-bottom: toRem(1)solid #f2f2f2;
-}
-
-.day-bth:focus{
-    height: toRem(70);
+    position: static;
 }
 
 .month-bth{
     cursor: pointer;
     width: toRem(91);
     border: none;
-    border-bottom: toRem(1)solid #F2F2F2;
+    border-bottom: toRem(1)solid #F2F2F2;  
 }
 
 .year-bth{
@@ -254,5 +287,24 @@ select:focus {
 }
 
 .footer-btn:active {
+    animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
     background-color: #141ee1;
+    
 }
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
