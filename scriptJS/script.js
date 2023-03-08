@@ -20,8 +20,10 @@ function confirmPass(){
         password.style.borderColor = '#e10e0e'
         confirmPassword.style.borderColor = '#e10e0e'
     }
-    password.style.borderColor = '#F2F2F2'
-        confirmPassword.style.borderColor = '#F2F2F2'
+    if (password.value.length < 8 && confirmPassword.value.length < 8){
+        password.style.borderColor = '#e10e0e'
+        confirmPassword.style.borderColor = '#e10e0e'
+    }
 }
 
 
@@ -43,8 +45,10 @@ function setpassword(e) {
         password.style.borderColor = '#e10e0e'
         confirmPassword.style.borderColor = '#e10e0e'
     }  
-    
-    
+    if (password.value.length < 8 && confirmPassword.value.length < 8){
+        password.style.borderColor = '#e10e0e'
+        confirmPassword.style.borderColor = '#e10e0e'
+    }  
 }
 
 
