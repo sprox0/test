@@ -26,6 +26,12 @@ body {
   height: 100vh;
 }
 
+.wrapper-section {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
 .data-user-section {
   max-width: 92.5%;
   margin: 0 auto;
@@ -34,7 +40,6 @@ body {
           animation-name: showcard;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
-  overflow: hidden;
 }
 
 @-webkit-keyframes showcard {
@@ -101,7 +106,7 @@ body {
   }
 }
 .signup-section {
-  width: 20.7%;
+  max-width: 20.7%;
   background-color: #5A61ED;
   display: flex;
   align-items: end;
@@ -128,11 +133,12 @@ body {
   background-position: 100% 100%;
   background-color: #FFFFFF;
   width: 33rem;
+  overflow: hidden;
 }
 
 .header-user {
   height: 10%;
-  width: 100%;
+  max-width: 100%;
 }
 
 .header-title {
@@ -334,5 +340,34 @@ select:focus {
   }
   40%, 60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+@media (max-width: 660px) {
+  .data-user {
+    overflow-y: scroll;
+  }
+  .header-user {
+    max-width: 60%;
+  }
+  .registr-card {
+    margin: 0 auto;
+    height: 100vh;
+  }
+  .user-info-section {
+    width: 15.625rem;
+    display: grid;
+    grid-template-columns: repeat(1, 14.8125rem);
+    margin: 0 auto;
+    padding-top: 1.25rem;
+  }
+  .signup-text {
+    font-size: 1.75rem;
+    line-height: 0.625rem;
+    text-align: center;
+    transform-origin: top rigth;
+    height: 160vh;
+  }
+  .footer-card {
+    padding-top: 2.8125rem;
   }
 }/*# sourceMappingURL=style.css.map */

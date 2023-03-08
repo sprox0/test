@@ -35,13 +35,18 @@ body {
     height: 100vh;
 }
 
+.wrapper-section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
 .data-user-section {
     max-width: 92.5%;
     margin: 0 auto;
     transition: ease-in-out 6s;
     animation-name: showcard;
     animation-duration: 3s;
-    overflow: hidden;
 }
 
 @keyframes showcard {
@@ -85,7 +90,7 @@ body {
 }
 
 .signup-section {
-    width: 20.7%;
+    max-width: 20.7%;
     background-color: #5A61ED;
     display: flex;
     align-items: end;
@@ -111,12 +116,13 @@ body {
     background-position: 100% 100%;
     background-color: #FFFFFF;
     width: toRem(528);
+    overflow: hidden;
 }
 //                  HEADER CARD
 
 .header-user {
     height: 10%;
-    width: 100%;
+    max-width: 100%;
 }
 
 .header-title{
@@ -306,5 +312,41 @@ select:focus {
     }
     40%, 60% {
       transform: translate3d(4px, 0, 0);
+    }
+  }
+
+  @media (max-width: 660px){
+
+    .data-user {
+        overflow-y: scroll;
+    }
+
+    .header-user{
+        max-width: 60%;
+    }
+
+    .registr-card{
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    .user-info-section {
+        width: toRem(250);
+        display: grid;
+        grid-template-columns: repeat(1, toRem(237));
+        margin: 0 auto;
+        padding-top: toRem(20);
+    }
+
+    .signup-text {
+        font-size: toRem(28);
+        line-height: toRem(10);
+        text-align: center;
+        transform-origin: top rigth;
+        height: 160vh;
+    }
+
+    .footer-card {
+        padding-top: toRem(45);
     }
   }
