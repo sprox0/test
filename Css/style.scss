@@ -41,10 +41,54 @@ body {
     height: 100vh;
 }
 
+.complete-wrapper{
+    display: none;
+}
+
+.complete-wrapper.active {
+    display: flex;
+    align-items: end;
+    width: 100vw;
+    height: toRem(481);
+}
+
+.complete-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: toRem(20);   
+}
+
+.complete-title {
+    color: #111111;
+    font-family: 'WorkSans';
+    font-size: toRem(22);
+    line-height: toRem(25);
+    margin: 0;
+    padding-bottom: toRem(11);
+}
+.complete-subtitle {
+    color: #111111;
+    font-family: 'WorkSans-ligth';
+    font-size: toRem(14);
+    line-height: toRem(16);
+    padding-bottom: toRem(152);
+    align-self: center;
+    margin: 0;
+}
+
+.login-complete {
+    padding-bottom: toRem(44);
+}
+
+.data-user-section.active {
+    display: none;
+}
+
 .data-user-section {
     max-width: 92.5%;
     margin: 0 auto;
-    transition: ease-in-out 6s;
+    transition: ease-out 3s;
     animation-name: showcard;
     animation-duration: 3s;
 }
@@ -275,6 +319,19 @@ select:focus {
     padding-top: toRem(98);
 }
 
+.footer-btn.active{
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: toRem(14);
+    line-height: toRem(18);
+    border: none;
+    background-color: #5A61ED;
+    width: toRem(154);
+    height: toRem(32);
+}
+
 .footer-btn{
     cursor: pointer;
     color: #FFFFFF;
@@ -292,7 +349,11 @@ select:focus {
     background-color: #4e56ee;
 }
 
-.footer-btn:active {
+.footer-btn:active{
+    background-color: #141ee1;
+}
+
+.footer-btn.active:active {
     animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
     perspective: 1000px;

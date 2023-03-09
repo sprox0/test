@@ -32,10 +32,55 @@ body {
   height: 100vh;
 }
 
+.complete-wrapper {
+  display: none;
+}
+
+.complete-wrapper.active {
+  display: flex;
+  align-items: end;
+  width: 100vw;
+  height: 30.0625rem;
+}
+
+.complete-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-left: 1.25rem;
+}
+
+.complete-title {
+  color: #111111;
+  font-family: "WorkSans";
+  font-size: 1.375rem;
+  line-height: 1.5625rem;
+  margin: 0;
+  padding-bottom: 0.6875rem;
+}
+
+.complete-subtitle {
+  color: #111111;
+  font-family: "WorkSans-ligth";
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding-bottom: 9.5rem;
+  align-self: center;
+  margin: 0;
+}
+
+.login-complete {
+  padding-bottom: 2.75rem;
+}
+
+.data-user-section.active {
+  display: none;
+}
+
 .data-user-section {
   max-width: 92.5%;
   margin: 0 auto;
-  transition: ease-in-out 6s;
+  transition: ease-out 3s;
   -webkit-animation-name: showcard;
           animation-name: showcard;
   -webkit-animation-duration: 3s;
@@ -288,6 +333,19 @@ select:focus {
   padding-top: 6.125rem;
 }
 
+.footer-btn.active {
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  border: none;
+  background-color: #5A61ED;
+  width: 9.625rem;
+  height: 2rem;
+}
+
 .footer-btn {
   cursor: pointer;
   color: #FFFFFF;
@@ -306,6 +364,10 @@ select:focus {
 }
 
 .footer-btn:active {
+  background-color: #141ee1;
+}
+
+.footer-btn.active:active {
   -webkit-animation: shake 0.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
           animation: shake 0.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
